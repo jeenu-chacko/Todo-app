@@ -1,0 +1,267 @@
+*  
+    { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    box-sizing: border-box; 
+    font-family: "Architects Daughter";
+}
+
+
+
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.form-img
+{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.form-img img{
+    margin-left:50% ;
+}
+
+
+
+
+nav .Brand{
+    font-size: 1.2rem;
+    font-family: "Architects Daughter";
+    color: white;
+}
+
+
+
+nav .mob{
+    display: none;
+}
+
+nav .add{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   
+}
+
+
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 9vh;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(194, 207, 218,0);
+}
+
+nav ul {
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li{
+    list-style: none;
+    
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+
+.main-card .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2%;
+    padding: 10px;
+    border: 0.4px solid black;
+    border-radius: 10px;
+    height: 300px;
+    width:330px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card .Main_description
+{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+
+.card .sub_description{
+    padding-left: 10px;
+    font-size: 1.8rem;
+    margin-top: 5%;
+    height: 120px;
+    word-break: break-all;
+}
+
+
+.main-card .card .icons{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    height: 10%;
+    width: 40%;
+    margin: 0 auto;
+}
+.main-card .card .time{
+    width: 100%;
+    display: flex;
+    color: darkgray;
+    justify-content: space-between;
+}
+
+.main-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+
+.card .Main_description .title{
+    font-size:2.7rem;
+    word-break: break-all;
+}
+
+.fa-plus-square {
+    padding: 5px;
+    color: white;
+    margin: auto;
+    font-size: 25px;
+  }
+  .Brand{   
+    color: white;
+    text-align: center;
+}
+
+h3{
+    font-size: 3rem;
+    font-family: "Architects Daughter";
+}
+
+form{
+    margin: auto;
+    width:580px;
+}
+
+input{
+    margin: 2%;
+}
+textarea.form-control {
+margin: 2%;
+}
+
+.btn{
+    font-size: 1.4rem;
+    background-color: white;
+    margin: 2%;
+}
+label{
+    font-size: 1.5rem;
+    color: black;
+    margin: 2%;
+}
+
+
+.text-muted {
+    color: black;
+    margin-left: 7px;    
+}
+
+#div_id_completed{
+    margin-left: 2%;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .main-card
+    {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .main-card .card{
+        overflow: hidden;
+        margin-top: 5%;
+        max-width: 80%;
+    }
+
+   
+
+    /* .main-card .card .icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    } */
+    
+    .main-card .card .icons img{
+        margin: 3%;
+    }
+
+
+  
+    .Brand{
+        text-align: center;
+    }
+
+    
+    form{
+        margin: auto;
+        width:95%;
+        padding: 1%;
+    }
+   
+    .form-img {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-img img{
+        margin-left: 5%;
+    }
+
+
+.card .sub_description{
+    padding-left: 10px;
+    font-size: 1.8rem;
+    margin-top: 5%;
+    height: 100px;
+    word-break: break-all;
+}
+  }

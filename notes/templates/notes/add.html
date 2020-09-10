@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+
+</head>
+
+<body>
+
+      <div class="form-img">
+        <a href="{% url 'show_notes' %}"><img src="https://img.icons8.com/dotty/30/000000/back.png"/></a>    
+        <div class="Brand"><h1>Todo Django</h1></div>                        
+      </div>                 
+
+        </div>
+        <h3 class="Brand">Add Todo</h3>
+            {% load crispy_forms_tags %}
+        <form method="POST">
+        {% csrf_token %}
+           <div class="form-group col-md-12 mb-0">
+             {{ form.title|as_crispy_field }}
+            {{ form.deadline|as_crispy_field }}
+            {{ form.desc|as_crispy_field }}
+            {{ form.completed|as_crispy_field }}
+            <div class="button"><button class="btn btn-secondary btn-lg " type="submit">Submit</button></div>
+            
+            </div>
+            </form>
+               
+            
+
+
+  
+
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
+
+

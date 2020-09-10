@@ -1,0 +1,84 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+
+</head>
+
+<body>
+   
+
+  
+ 
+<nav>
+
+<div class="Brand"><h1>Todo Django</h1></div>
+<div class ="mob"><i class="fas fa-plus-square"></i></div>
+<ul>
+<li>
+<div class="add">
+    <a href={% url 'todoform' %}><i class="fas fa-plus-square"></i></a>
+    </div>
+</li>
+
+
+</nav>
+        
+
+  
+<div class ="main-card">
+{% for todo in all_todo %}
+    <div class="card">  
+   
+        <div class ="Main_description">
+      
+        <div class="title">{{ todo.title }}</div>  
+       
+                 
+        </div>
+        <div class= "sub_description">
+                    <div class="sub"><p>{{ todo.desc }}</p></div>
+        </div>
+        <div class ="time">
+            <div class="created">{{ todo.created }}</div>
+            <div class="deadline">{{ todo.deadline }}</div>
+        </div>
+        <div class="icons">
+        {% if todo.completed %}
+        <img src="https://img.icons8.com/ios/20/000000/checked-2.png"/>
+        {% else %}
+        <img src="https://img.icons8.com/doodle/20/000000/delete-sign.png"/>
+        {% endif %}
+        
+        <a href="{% url 'editform' todo.pk %}"><img src="https://img.icons8.com/ios-filled/20/000000/edit.png"></a>
+        <a href ="{% url 'delete' todo.pk %}"><img src="https://img.icons8.com/material-sharp/20/000000/filled-trash.png"/></a>
+           
+        </div>     
+
+    </div>
+{% endfor %}  
+
+
+   
+</div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    
+</body>
+
+</html>
